@@ -1,29 +1,15 @@
-/* Задание на урок:
-
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
-
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
-
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
-
-Проверить, чтобы все работало без ошибок в консоли */
-
 'use strict';
 
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+
+if (numberOfFilms<10){
+console.log('Просмотрено довольно мало фильмов');
+}else if (numberOfFilms>=30){
+console.log('Вы киноман');
+}else if (10<=numberOfFilms<=30){
+console.log('Вы классический зритель');
+}else {console.log('Error');}
+
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -33,12 +19,48 @@ const personalMovieDB = {
     privat: false
 }
 
-const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
-      gradeOfFilm = prompt('На сколько оцените его?',''),
-      lastWatchingFilm2 = prompt('Один из последних просмотренных фильмов?',''),
-      gradeOfFilm2 = prompt('На сколько оцените его?','');
+// for (let i=1;i<2; i++){
+// const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
+//       gradeOfFilm = prompt('На сколько оцените его?','');
 
-personalMovieDB.movies [lastWatchingFilm]=gradeOfFilm;
-personalMovieDB.movies [lastWatchingFilm2]=gradeOfFilm2;
+//       if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
+//             personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
+//       }else{
+//         console.log('Error');
+//         i--;
+//       }
+    
+// }
+// let i=0
+// while (i<2){
+//     i++;
+//     const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
+//           gradeOfFilm = prompt('На сколько оцените его?','');
+    
+//           if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
+//                 personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
+//           }else{
+//             console.log('Error');
+//             i--;
+//           }
+        
+//     }
+
+// console.log(personalMovieDB);
+let i=0
+do {
+    i++;
+    const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
+          gradeOfFilm = prompt('На сколько оцените его?','');
+    
+          if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
+                personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
+          }else{
+            console.log('Error');
+            i--;
+          }
+        
+    }
+while (i<2)
 
 console.log(personalMovieDB);
