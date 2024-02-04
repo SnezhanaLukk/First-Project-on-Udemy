@@ -60,111 +60,198 @@
 // getCoupeNumber(0);
 
 
-// Место для первой задачи
-function getTimeFromMinutes(minutesAll) { 
-    if (typeof(minutesAll) !== 'number' || minutesAll < 0 || !Number.isInteger(minutesAll)) {
-        console.log('Ошибка, проверьте данные');
-        return ("Ошибка, проверьте данные");
-}
-    const hours = Math.floor(minutesAll / 60);
-    const minutes = minutesAll % 60;
-    let hoursStr = '';
+// // Место для первой задачи
+// function getTimeFromMinutes(minutesAll) { 
+//     if (typeof(minutesAll) !== 'number' || minutesAll < 0 || !Number.isInteger(minutesAll)) {
+//         console.log('Ошибка, проверьте данные');
+//         return ("Ошибка, проверьте данные");
+// }
+//     const hours = Math.floor(minutesAll / 60);
+//     const minutes = minutesAll % 60;
+//     let hoursStr = '';
 
-    switch (hours) {
-        case 0: 
-            hoursStr = 'часов';
-            break;
-        case 1:
-            hoursStr = 'час';
-            break;
-        case 2:
-        case 3:
-        case 4:
-            hoursStr = 'часа';
-            break;
-        default:
-            hoursStr = 'часов';
-    }
-    console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`);
-    return `Это ${hours} ${hoursStr} и ${minutes} минут`;
-}
+//     switch (hours) {
+//         case 0: 
+//             hoursStr = 'часов';
+//             break;
+//         case 1:
+//             hoursStr = 'час';
+//             break;
+//         case 2:
+//         case 3:
+//         case 4:
+//             hoursStr = 'часа';
+//             break;
+//         default:
+//             hoursStr = 'часов';
+//     }
+//     console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`);
+//     return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+// }
 
-getTimeFromMinutes(-150);
+// getTimeFromMinutes(-150);
 
 
 
-//Место для второй задачи
-function findMaxNumber(a, b, c, d) {
-if (typeof(a) !== 'number' || typeof(b) !== 'number'|| typeof(c) !== 'number'|| typeof(d) !== 'number'){
-    console.log('0');
-} else {
-    console.log(Math.max(a, b, c, d));
-}
-}
-findMaxNumber(6, 3, '12', 8);
+// //Место для второй задачи
+// function findMaxNumber(a, b, c, d) {
+// if (typeof(a) !== 'number' || typeof(b) !== 'number'|| typeof(c) !== 'number'|| typeof(d) !== 'number'){
+//     console.log('0');
+// } else {
+//     console.log(Math.max(a, b, c, d));
+// }
+// }
+// findMaxNumber(6, 3, '12', 8);
+
+// // function fib(a) {
+// //     if (typeof(a) !== 'number' || a <= 0 || !Number.isInteger(a)) {
+// //         return "";
+// //     }
+// //     let arr = [0, 1];
+// //     let b=0, c=1, d=0;
+// //     for (let i = 2; i<a; i++){
+// //         arr[i]= b+c;
+// //         d=c+b;
+// //         b=c;
+// //         c=d;
+// //     }
+// //    return arr;
+// // }
+// // console.log(fib(8));
+
+
 
 // function fib(a) {
 //     if (typeof(a) !== 'number' || a <= 0 || !Number.isInteger(a)) {
 //         return "";
 //     }
-//     let arr = [0, 1];
+//     let res = '';
 //     let b=0, c=1, d=0;
-//     for (let i = 2; i<a; i++){
-//         arr[i]= b+c;
+//     for (let i = 0; i<a; i++){
+//         if(i+1 === a){
+//             res = res + `${b}`;
+//         } else{
+//             res = res + `${b} `;
+//         }
 //         d=c+b;
 //         b=c;
 //         c=d;
 //     }
-//    return arr;
+//    return res;
 // }
 // console.log(fib(8));
 
 
+// function fib(num) {
+//     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
 
-function fib(a) {
-    if (typeof(a) !== 'number' || a <= 0 || !Number.isInteger(a)) {
-        return "";
-    }
-    let res = '';
-    let b=0, c=1, d=0;
-    for (let i = 0; i<a; i++){
-        if(i+1 === a){
-            res = res + `${b}`;
-        } else{
-            res = res + `${b} `;
-        }
-        d=c+b;
-        b=c;
-        c=d;
-    }
-   return res;
+//     let result = '';
+//     let first = 0;
+//     let second = 1;
+
+//     for (let i = 0; i < num; i++) {
+//         if (i + 1 === num) {
+//             result += `${first}`;
+//             // Без пробела в конце
+//         } else {
+//             result += `${first} `;
+//         }
+
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
+
+//     return result;
+// }
+
+// fib(5)
+
+// const shoppingMallData = {
+//     shops: [
+//         {
+//             width: 10,
+//             length: 5
+//         },
+//         {
+//             width: 15,
+//             length: 7
+//         },
+//         {
+//             width: 20,
+//             length: 5
+//         },
+//         {
+//             width: 8,
+//             length: 10
+//         }
+//     ],
+//     height: 5,
+//     moneyPer1m3: 30,
+//     budget: 50000
+// }
+
+// function isBudgetEnough(data) {
+//     let res='';
+//     for (let i=0; i<data.shops.length; i++){
+//         res = +res + (data.shops[i].width*data.shops[i].length);
+//     }
+//     res=res*data.height*data.moneyPer1m3;
+//     if (res<data.budget){
+//         console.log('Бюджета достаточно');
+//         return('Бюджета достаточно');
+//     } else {
+//         console.log(res);
+//         console.log('Бюджета недостаточно');
+//         return('Бюджета недостаточно');
+//     }
+// }
+// isBudgetEnough(shoppingMallData);
+
+
+// const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+
+// function sortStudentsByGroups(arr) {
+// arr.sort();
+// let surplus = '';
+// for (let i=9; i<arr.length;i++){
+//     let res = arr[i];
+// (i===arr.length-1)?surplus = surplus+res:surplus=surplus+res+', ';
+// }
+// const group1 = [], group2 = [], group3 = [];
+// for (let i=0;i<3;i++){
+//     group1[i]=arr[i];
+// }
+// for (let i=3;i<6;i++){
+//     group2[i-3]=arr[i];
+// }
+// for (let i=6;i<9;i++){
+//     group3[i-6]=arr[i];
+// }
+// (surplus==='')? surplus='Оставшиеся студенты: -':surplus = 'Оставшиеся студенты: '+surplus;
+// console.log(group1, group2, group3, surplus);
+// return[group1, group2, group3, surplus]
+// }
+
+// sortStudentsByGroups(students);
+
+
+
+// const getSum = function(a, b) {
+//     return a + b;
+// }
+// const result = getSum(5, 6);
+
+// console.log(result);
+
+function foo(a,b) {
+    const [first] = a;
+    const {eng} = b;
+ 
+    return `${first} ${eng}`;
 }
-console.log(fib(8));
-
-
-function fib(num) {
-    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
-        return "";
-    }
-
-    let result = '';
-    let first = 0;
-    let second = 1;
-
-    for (let i = 0; i < num; i++) {
-        if (i + 1 === num) {
-            result += `${first}`;
-            // Без пробела в конце
-        } else {
-            result += `${first} `;
-        }
-
-        let third = first + second;
-        first = second;
-        second = third;
-    }
-
-    return result;
-}
-
-fib(5)
+ 
+const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'})
+console.log(result);

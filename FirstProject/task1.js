@@ -16,21 +16,22 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    privat: falseб,
+    
 }
 
-// for (let i=1;i<2; i++){
-// const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
-//       gradeOfFilm = prompt('На сколько оцените его?','');
+for (let i=1;i<2; i++){
+const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
+      gradeOfFilm = prompt('На сколько оцените его?','');
 
-//       if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
-//             personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
-//       }else{
-//         console.log('Error');
-//         i--;
-//       }
+      if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
+            personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
+      }else{
+        console.log('Error');
+        i--;
+      }
     
-// }
+}
 // let i=0
 // while (i<2){
 //     i++;
@@ -47,20 +48,20 @@ const personalMovieDB = {
 //     }
 
 // console.log(personalMovieDB);
-let i=0
-do {
-    i++;
-    const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
-          gradeOfFilm = prompt('На сколько оцените его?','');
+// let i=0
+// do {
+//     i++;
+//     const lastWatchingFilm = prompt('Один из последних просмотренных фильмов?',''),
+//           gradeOfFilm = prompt('На сколько оцените его?','');
     
-          if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
-                personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
-          }else{
-            console.log('Error');
-            i--;
-          }
+//           if (lastWatchingFilm != null && lastWatchingFilm!='' && lastWatchingFilm.length<50 && gradeOfFilm != null && gradeOfFilm!='' && gradeOfFilm.length<50){
+//                 personalMovieDB.movies[lastWatchingFilm]=gradeOfFilm;
+//           }else{
+//             console.log('Error');
+//             i--;
+//           }
         
-    }
-while (i<2)
+//     }
+// while (i<2)
 
 console.log(personalMovieDB);
